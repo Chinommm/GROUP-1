@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Lexend';
+  line-height: 1.6;
+  background-color: #6299a1;
+}
+
+header {
+  height: 15%;
+  padding: 15px;
+  font-size: 280%;
+  text-align: center;
+  color: white;
+  background-color: #6299a1;
+}
+
+.tablink {
+  background-color: #7ec4cf;
+  color: White;
+  float: left;
+  border: 3px solid #528087; /* Thicker blue border */
+  outline: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  font-size: 20px;
+  width: 25%; /* Adjusted width to fit 4 buttons in one row */
+  font-family: 'Lexend';
+  transition: transform 0.3s ease;
+}
+
+.tablink:hover {
+  background-color: #7ec4cf;
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+}
+
+.tabcontent {
+  background-color: #98e1ec;
+  color: #261417ff;
+  display: none;
+  padding: 94px;
+  height: 95%;
+  font-family: 'Biryani';
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  overflow-y: scroll;  /* Allow scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #82dcea white;
+}
+
+.tabcontent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tabcontent::-webkit-scrollbar-track {
+  background: white;
+}
+
+.tabcontent::-webkit-scrollbar-thumb {
+  background-color: #f6299a1;
+  border-radius: 10px;
+}
+
+/* Pulse animation for active tab */
+.tablink:active {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+}
+
+h {
+  font-size: 140%;
+}
+
+p {
+  font-size: 125%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+#PreliminaryPrototype {background-color: white;}
+#SurveyAnalysis {background-color: white;}
+#RevisedPrototype {background-color: white;}
+</style>
+</head>
+<header>
+GROUP 1
+</header>
+<body>
+
+    <button class="tablink" onclick="openPage('typhoon', this, '#7ec4cf')" id="defaultOpen">CREATE A DRAFT OF THE PLAN</button>
+    <button class="tablink" onclick="openPage('middle', this, '#7ec4cf')">CHOOSE A CONTENT CATEGORY</button>
+    <button class="tablink" onclick="openPage('solution', this, '#7ec4cf')">WATCH CONTENT FROM THE CATEGORIES</button>
+    <button class="tablink" onclick="openPage('findNeed', this, '#7ec4cf')">FIND A NEED TO THE CHOSEN CATEGORY</button>
+
+<div id="typhoon" class="tabcontent">
+<h1 style='text-align: left;'><b>CHOSEN CATEGORY</b></h1>
+<p>Our category is educational videos, it focuses on teaching viewers about the health challenges faced by the Sitio Bebe community. These videos will highlight the importance of access to clean water, proper healthcare, and enough nutrition, explaining how community support can help improve the situation.
+</p>
+
+<h1 style='text-align: left;'><b>TARGET AUDIENCE</b></h1>
+<p>Our target audience includes students, teachers, families, potential donors, community members, and health organizations interested in helping communities in need. By reaching out to schools and education organizations, we aim to inspire people to get involved and raise awareness about the struggles in Sitio Bebe. Educating this audience about the health issues faced by the community can encourage them to contribute and make a difference.
+</p>
+
+<h1 style='text-align: left;'><b>NEEDS</b></h1>
+<p>Sitio Bebe needs support for clean water access, healthcare supplies, food, and more medical workers. Access to nutritious food is essential for the health of the residents. Education about proper health practices can help reduce diseases and promote better living conditions. Raising funds through this video can meet these needs and improve the health of the residents by providing essential medical services, clean water sources, and food resources.
+</p>
+</div>
+
+<div id="middle" class="tabcontent">
+    <h1 style='text-align: left;'><b>NEEDS</b></h1>
+    <p>Sitio Bebe needs support for clean water access, healthcare supplies, food, and more medical workers. Access to nutritious food is essential for the health of the residents. Education about proper health practices can help reduce diseases and promote better living conditions. Raising funds through this video can meet these needs and improve the health of the residents by providing essential medical services, clean water sources, and food resources.
+    </p>
+
+<h1 style='text-align: center;'><b>Footer</b></h1>
+<p>TEXT</p>
+</div>
+
+<div id="solution" class="tabcontent">
+<h1 style='text-align: center;'>Whoa cool</h1>
+<p>I forgor</p>
+</div>
+
+<div id="findNeed" class="tabcontent">
+
+
+<h1 style='text-align: left;'><b>1. How-to Instructional Videos
+</b></h1>
+</p>Clear Instructions: Viewers require step-by-step instructions to complete activities or solve difficulties.
+Visual demonstrations: Seeing the process visually improves comprehension and recall.
+Real-world applications make the instructions more understandable and practical.</p>
+
+<h1 style='text-align: left;'><b>2. Tutorial Videos
+</b></h1>
+</p>Detailed Walkthroughs: Comprehensive tutorials for utilizing a product or software.
+Interactive elements enable viewers to follow along and practice.
+Supportive Resources: Extra materials, such as cheat sheets or downloaded guides.</p>
+
+<h1 style='text-align: left;'><b>3. Documentary Videos
+</b></h1>
+</p>In-depth Exploration: A thorough inquiry into a subject or issue.
+Storytelling is the use of narratives to enhance the appeal of the content.
+Expert Insights: Include interviews or opinions from experts to boost credibility.</p>
+
+<h1 style='text-align: left;'><b>General Needs in All Categories
+</b></h1>
+</p>Accessibility is making videos accessible to all viewers, including those with disabilities.
+Engagement is the process of keeping the viewer's attention by making the content interesting.
+Retention: Using tactics to assist viewers remember and apply what they've learned.</p>
+
+</div>
+
+
+<script>
+function openPage(pageName, elmnt, color) {
+  var i, tabcontent, tablinks;
+  
+  // Smooth scroll effect
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Hide all tabcontent and reset opacity and transform
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].style.opacity = "0";
+    tabcontent[i].style.transform = "translateX(-100%)";
+  }
+  
+  // Remove background color of all tablinks
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  
+  // Show the selected tab, apply the slide-in and fade-in effect
+  document.getElementById(pageName).style.display = "block";
+  setTimeout(function () {
+    document.getElementById(pageName).style.opacity = "1";
+    document.getElementById(pageName).style.transform = "translateX(0)";
+  }, 50);
+
+  // If no color is provided, set default blue color
+  elmnt.style.backgroundColor = color || "#7ec4cf";
+}
+
+// Trigger default open tab
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
